@@ -13,7 +13,7 @@ import sys
 # TODO(michaelbai): Move constant definitions like below to a common file.
 FORWARDER_PATH = '/data/local/tmp/forwarder'
 
-CHROME_DIR = os.path.abspath(os.path.join(sys.path[0], '..', '..'))
+CHROME_DIR = os.path.abspath(os.path.join(sys.path[0], '..'))
 
 
 def IsRunningAsBuildbot():

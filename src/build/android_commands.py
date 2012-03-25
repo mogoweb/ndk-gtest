@@ -23,9 +23,9 @@ import sys
 import tempfile
 import time
 
-# adb_interface.py is under ../../third_party/android_testrunner/
+# adb_interface.py is under ../third_party/android_testrunner/
 sys.path.append(os.path.join(os.path.abspath(os.path.dirname(__file__)), '..',
-   '..', 'third_party', 'android_testrunner'))
+   'third_party', 'android_testrunner'))
 import adb_interface
 import cmd_helper
 import errors  #  is under ../../third_party/android_testrunner/errors.py

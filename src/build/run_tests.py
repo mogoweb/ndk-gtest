@@ -66,15 +66,15 @@ from single_test_runner import SingleTestRunner
 from test_package_executable import TestPackageExecutable
 from test_result import BaseTestResult, TestResults
 
-_TEST_SUITES = ['base_unittests', 'sql_unittests', 'ipc_tests', 'net_unittests',
-                'sync_unit_tests', 'content_unittests']
-
+#_TEST_SUITES = ['base_unittests', 'sql_unittests', 'ipc_tests', 'net_unittests',
+#                'sync_unit_tests', 'content_unittests']
+_TEST_SUITES = ['base_unittests']
 
 def FullyQualifiedTestSuites():
   """Return a fully qualified list that represents all known suites."""
   # If not specified, assume the test suites are in out/Release
   test_suite_dir = os.path.abspath(os.path.join(run_tests_helper.CHROME_DIR,
-                                                'out', 'Release'))
+                                                'java', 'libs', 'armeabi-v7a'))
   return [os.path.join(test_suite_dir, t) for t in _TEST_SUITES]
 
 

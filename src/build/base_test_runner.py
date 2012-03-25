@@ -6,7 +6,7 @@ import logging
 import os
 
 import android_commands
-from chrome_test_server_spawner import SpawningServer
+#from chrome_test_server_spawner import SpawningServer
 from flag_changer import FlagChanger
 import lighttpd_server
 import run_tests_helper
@@ -81,10 +81,10 @@ class BaseTestRunner(object):
           |CHROME_DIR|.
       dest_dir: Absolute path to copy to on the device.
     """
-    for p in test_data_paths:
-      self.adb.PushIfNeeded(
-          os.path.join(run_tests_helper.CHROME_DIR, p),
-          os.path.join(dest_dir, p))
+    #for p in test_data_paths:
+    #  self.adb.PushIfNeeded(
+    #      os.path.join(run_tests_helper.CHROME_DIR, p),
+    #      os.path.join(dest_dir, p))
 
   def LaunchTestHttpServer(self, document_root, extra_config_contents=None):
     """Launches an HTTP server to serve HTTP tests.
