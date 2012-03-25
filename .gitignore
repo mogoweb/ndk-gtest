@@ -2,3 +2,4 @@ src/java/libs/
 src/java/obj/
 .cproject
 .project
+*.pyc
