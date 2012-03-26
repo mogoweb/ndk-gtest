@@ -165,7 +165,8 @@ MessageLoop::MessageLoop(Type type)
     else
       pump_ = MESSAGE_PUMP_UI;
   } else if (type_ == TYPE_IO) {
-    pump_ = MESSAGE_PUMP_IO;
+//    pump_ = MESSAGE_PUMP_IO;
+	  pump_ = NULL;
   } else {
     DCHECK_EQ(TYPE_DEFAULT, type_);
     pump_ = new base::MessagePumpDefault();
@@ -805,12 +806,13 @@ bool MessageLoopForIO::WatchFileDescriptor(int fd,
                                            Mode mode,
                                            FileDescriptorWatcher *controller,
                                            Watcher *delegate) {
-  return pump_libevent()->WatchFileDescriptor(
-      fd,
-      persistent,
-      static_cast<base::MessagePumpLibevent::Mode>(mode),
-      controller,
-      delegate);
+//  return pump_libevent()->WatchFileDescriptor(
+//      fd,
+//      persistent,
+//      static_cast<base::MessagePumpLibevent::Mode>(mode),
+//      controller,
+//      delegate);
+	return false;
 }
 
 #endif

@@ -1,5 +1,7 @@
 src/java/libs/
 src/java/obj/
+src/java/gen/
+src/java/bin/
 .cproject
 .project
 *.pyc
